@@ -1,7 +1,7 @@
 # Site settings
 name: Máximo Fernández Riera
 description: "Freelance web developer. IT teacher at CIFP Francesc de Borja Moll. MSc in Teacher Training in Secondary Education"
-url: "maximo.codes"
+url: "www.maximo.codes"
 
 
 # Delete the lines you don't need
@@ -18,7 +18,7 @@ linkedin_username: maximofernandez
 #flickr_username: your_flickr_username_goes_here
 #steam_username: your_steam_username_goes_here
 #soundcloud_username:  your_soundcloud_username_goes_here
-#stack_of_username: your_stack_overflow_account_id_number_goes_here
+stack_of_username: 13946853
 #reddit_username: your_reddit_username_goes_here
 #medium_username:  your_medium_username_goes_here
 #tumblr_username: your_tumblr_username_goes_here
