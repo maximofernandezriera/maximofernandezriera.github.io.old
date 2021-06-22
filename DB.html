@@ -1,0 +1,2087 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>DB 2014 -2015</title>
+    <meta name="description" content="">
+    <meta name="author" content="Máximo Fernández Riera">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="./DB/bootstrap.min.css">
+    <link rel="stylesheet" href="./DB/reveal.min.css">
+    <link rel="stylesheet" href="./DB/default.css" id="theme">
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="./DB 2014 -2015_files/zenburn.css">
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script async="" src="./DB 2014 -2015_files/analytics.js"></script><script>
+        if (window.location.search.match(/print-pdf/gi)) {
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = 'css/print/pdf.css';
+            document.getElementsByTagName('head')[0].appendChild(link);
+        }
+    </script>
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body style="transition: -webkit-transform 0.8s ease 0s;">
+
+<div class="reveal default center" data-transition-speed="default" data-background-transition="default">
+
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides" style="width: 960px; height: 700px; zoom: 0.738;">
+        <section class="present" style="top: -350px; display: block;">
+            <h1>DB</h1>
+
+            <h3>Database modelling concepts</h3>
+
+            <p>Based on Beginning Database Design: From Novice to Professional
+                <br>Copyright © 2012 by Clare Churcher <br>
+                ISBN-13 (pbk): 978-1-4302-4209-3</p>
+
+            <p>
+            </p><h6>Responsibility exemption:</h6>
+            <small>This is a part of a copyrighted book used for <b>educational purpose only</b>.<br></small>
+            <small>Please , do not use this material without buying an original copy of the book.</small>
+            <small>Information in this website has only orientational purpoises</small>
+            <p></p>
+        </section>
+        <section hidden="" class="future stack" style="top: 0px; display: block;">
+            <section style="top: -287px; display: block;">
+                <h2>Assessment conditions</h2>
+                <ul>
+                    <li>Create a professional LinkedIn profile in English</li>
+                    <!--li>Achieve more than 40% on a final score considering all autochecks</li-->
+                    <li>Pass a final test with more than 50%</li>
+                    <li>Pass a final project with more than 50%</li>
+                </ul>
+                <div>&nbsp;</div>
+                <h3>Final mark</h3>
+                <ul>
+                    <li>Autochecks: 10%</li>
+                    <li>Knowledge: 40 %</li>
+                    <li>Project: 50 %</li>
+                </ul>
+                <div>Go down for tool review</div>
+            </section>
+            <section class="future" style="top: -244.5px; display: block;">
+                <h2>Usefull tools for UML creation and prototyping</h2>
+                <ol>
+                    <li><a href="https://drive.draw.io/" target="_blank">https://drive.draw.io/</a></li>
+                    <li><a href="https://www.lucidchart.com/" target="_blank">https://www.lucidchart.com/</a></li>
+                    <li><a href="http://www.vertabelo.com/" target="_blank">http://www.vertabelo.com/</a></li>
+                    <li><a href="http://www.modelio.org/" target="_blank">http://www.modelio.org/</a></li>
+                    <li><a href="http://pencil.evolus.vn/" target="_blank">http://pencil.evolus.vn/</a></li>
+                    <li><a href="http://www.smartdraw.com/" target="_blank">http://www.smartdraw.com/</a></li>
+                </ol>
+            </section>
+        </section>
+        <section hidden="" class="future stack" style="top: 0px; display: block;">
+            <section style="top: -314px; display: block;">
+                <h2>Datamodel creation in a nutshell</h2>
+                <img width="100%" src="./DB 2014 -2015_files/softwareProcess.png" alt="Down arrow">
+            </section>
+            <section class="future" style="top: -350px; display: block;">
+                <h2>Step 1 - requeriments</h2>
+
+                <h3>Use cases</h3>
+                <ul>
+                    <li>Are descriptions of how different types of users (more formally known as actors)
+                        might interact with the system.
+                    </li>
+                    <li>Part of the Unified Modeling Language (UML), a set of diagramming techniques used to depict
+                        various aspects of the software process
+                    </li>
+                    <li>Can be at many different levels, from high–level corporate goals down to descriptions of small
+                        program modules
+                    </li>
+
+                </ul>
+                <img height="50%" src="./DB 2014 -2015_files/usecases.png" alt="Down arrow">
+
+            </section>
+            <section class="future" style="top: -20px; display: none;">
+                <h2>Use cases example</h2>
+                <img height="100%" src="./DB 2014 -2015_files/usecases_example.png" alt="Down arrow">
+            </section>
+            <section class="future" style="top: -20px; display: none;">
+                <h2>Step 2 - Data Model creation</h2>
+                <ul>
+                    <li>sketch an initial data model that is a representation of how the different types of data
+                        interact
+                    </li>
+                    <li>UML provides class diagrams that are a useful way of representing this information
+                    </li>
+                    <li>
+                        Each class can be considered a template for storing data about a set of similar things (places,
+                        events, or people).
+                    </li>
+                    <li>These pieces of information, that we will keep about each plant, are referred to as the
+                        attributes (or properties) of the class
+                    </li>
+                </ul>
+                <img height="50%" src="./DB 2014 -2015_files/datamodel.png" alt="Down arrow">
+            </section>
+            <section class="future" style="top: -20px; display: none;">
+                <h2>Step 2 - Data model relationships</h2>
+                <ul>
+                    <li>One particular plant object can have many uses</li>
+                    <li>We can think of this as a relationship (or association) between
+                        particular objects of the Plant class and objects of the Use class
+                    </li>
+                    <li>In a database, we would usually create a table for each class, and the information about each
+                        object would be recorded as a row in that table
+                    </li>
+                    <li>The information about the specific relationship instances
+                        would also be recorded in a table.
+                    </li>
+                    <li>Relationships links content from one table data to another table data</li>
+                </ul>
+            </section>
+            <section class="future" style="top: -20px; display: none;">
+                <h2>Step 2- Data model relationships</h2>
+                <ul>
+                    <li>In UML, a relationship is represented by a line between two class rectangles</li>
+                    <li>The pair of numbers at each end of the line indicates how many objects of one
+                        class can be associated with a particular object of the other class
+                    </li>
+                    <li>The first number is the minimum number. This
+                        is usually 0 or 1 and is therefore sometimes known as the <u>optionality</u></li>
+                    <li>The second number is the greatest number of related objects. It is usually 1 or many (denoted
+                        n), although other numbers are possible
+                    </li>
+                    <li>Collectively, these numbers can be referred to as the <u>cardinality</u> or the
+                        <u>multiplicity</u> of the relationship.
+                    </li>
+                </ul>
+            </section>
+            <section class="future" style="top: -20px; display: none;">
+                <img height="100%" src="./DB 2014 -2015_files/datamodel_uml.png">
+                <ul>
+                    <li>Relationships are read in both directions. Figure 2-9 shows how many objects of the right–hand
+                        class can
+                        be associated with one particular object of the left–hand class and vice versa.
+                    </li>
+                    <li>When we want to know how many
+                        objects of ClassB are associated with ClassA, we look at the numbers nearest ClassB.
+                    </li>
+                </ul>
+            </section>
+            <section class="future" style="top: -20px; display: none;">
+                <h2>Step 2- Data model relationship types</h2>
+                <img height="100%" src="./DB 2014 -2015_files/datamodel_uml_var.png">
+            </section>
+        </section>
+        <section hidden="" class="future stack" style="top: 0px; display: block;">
+            <section style="top: -350px; display: block;">
+                <h2>Example (1)</h2>
+                <img height="100%" src="./DB_files/example_1.png">
+            </section>
+            <section class="future" style="top: -20px; display: none;">
+                <h2>Example (2)</h2>
+                <img height="100%" src="./DB_files/example_2.png">
+            </section>
+            <section class="future" style="top: -20px; display: none;">
+                <h2>Example (3)</h2>
+                <img height="100%" src="./DB_files/example_3.png">
+            </section>
+            <section class="future" style="top: -20px; display: none;">
+                <h2>Example (4)</h2>
+                <img height="100%" src="./DB_files/example_4.png">
+            </section>
+            <section class="future" style="top: -20px; display: none;">
+                <h2>Example (5)</h2>
+                <img height="100%" src="./DB_files/example_5.png">
+            </section>
+            <section class="future" style="top: -20px; display: none;">
+                <h2>Example (6)</h2>
+                <img height="100%" src="./DB_files/example_6.png">
+            </section>
+            <section class="future" style="top: -20px; display: none;">
+                <h2>Example (7)</h2>
+                <img height="100%" src="./DB_files/example_7.png">
+            </section>
+        </section>
+        <section hidden="" class="future stack" style="top: -20px; display: none;">
+            <section style="top: -20px; display: none;">
+                <h3>Mini task I : GP championship</h3>
+                <small>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6">
+                                The manager of the Local Motorbike Championship (LMC) for Young Racers has phone you to
+                                ask
+                                if you're able to create a basic application for managing young racers profiles in each
+                                season
+                                and
+                                championship.
+                                Your database should consider this options:
+
+                            </div>
+                            <div class="col-md-6">
+                                <ul>
+                                    <li>LMC needs to take care about all racer's careers, separate by seasons</li>
+                                    <li>They only consider final time AND the final score for every player of the
+                                        championship
+                                        , they don't have the need of considering every lap.
+                                    </li>
+                                    <li>Players are not sponsorized by brands, they take part by their own</li>
+                                    <li>Player information which must be considered
+                                        <ul>
+                                            <li>Name &amp; Surname</li>
+                                            <li>Contact Data</li>
+                                            <li>National Identity Card</li>
+                                            <li>Born Date</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <br>
+
+                                <h3>Additional considerations</h3>
+                                <ul>
+                                    <li>Championship happens in different dates every year</li>
+                                    <li>A championship is always done in a track</li>
+                                    <li>A player can take part in several seasons</li>
+                                    <li>The winner in a championship is the one who finishes first</li>
+                                    <li>Track information is very important for the company (total length, lap distance,
+                                        build
+                                        date
+                                        and location)
+                                    </li>
+                                    <li>If you can, integrate an score trace for racers separated by seasons</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </small>
+            </section>
+            <section class="future" style="top: -20px; display: none;">
+                <h3>Mini task II : Nursery Session Register</h3>
+                <small>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6">
+                                A very important child care group wants you to design a nursery registration tool for
+                                their
+                                sessions feedback and contact data for their parents.
+                            </div>
+                            <div class="col-md-5 col-md-offset-1">
+                                Design a datamodel suitable for this requirements:
+                                <ul>
+                                    <li>Users can manage children data (name, age, sex, etc)</li>
+                                    <li>Users must know next children's birthday every week</li>
+                                    <li>The system must ensure parent's personal contact data information</li>
+                                    <li>Users can manage children attendance register</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <br>
+
+                                <h3>Additional considerations</h3>
+                                <ul>
+                                    <li>Table / Class names must be singular</li>
+                                    <li>Define attributes</li>
+                                    <li>User UML annotation</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </small>
+            </section>
+        </section>
+        <section hidden="" class="future stack" style="top: -20px; display: none;">
+            <section style="top: -20px; display: none;">
+                <h2>Initial Requirements and Use Cases</h2>
+
+                <p>The analyst needs to immerse himself in the problem domain so deeply that he begins to discover
+                    nuances that even those who live with air traffic control every day have not fully considered.</p>
+                <br>
+                <h6>You cannot create an application without knowing your user business logic</h6>
+            </section>
+            <section class="future" style="top: -20px; display: none;">
+                <h2>Common problems</h2>
+
+                <p>Answers such as “No, not really,” or “Hardly
+                    ever,” or “Umm, no, I don’t think so, umm, well maybe,” are a sign that a complication exists that
+                    needs to be
+                    understood before any design of a database should proceed further.</p>
+                <img class="stretch" height="100%" src="./DB_files/analystView.png" style="width: 789.048px; height: 590px;">
+
+                <p>The first thing an analyst must do is understand the client’s problem in sufficient detail to help
+                    determine the
+                    input and output requirements (both immediate and potential).</p>
+            </section>
+            <section class="future" style="top: -20px; display: none;">
+                <h2>Main questions</h2>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul>
+                                <li>What Does the User Do?</li>
+                                <li class="list-unstyled">
+                                    <small>
+                                        <ul>
+                                            <li>List the jobs that the user regularly undertakes</li>
+                                            <li>Actions involving entering data into the system</li>
+                                            <li>Common reports or services known</li>
+                                        </ul>
+                                        <div>Example: Driver hands in time sheet at the end of his shift
+                                            / Receptionist selects a driver and gives him the information about the
+                                            order.
+                                        </div>
+                                    </small>
+                                </li>
+                                <li>What Data Are Involved?</li>
+                                <li class="list-unstyled">
+                                    <small>
+                                        <ul>
+                                            <li>The tasks described in the previous section are very much stated from
+                                                the user's
+                                                point of view and are what physically take place
+                                            </li>
+                                            <li>Think about what data, if any, need to be recorded or retrieved at each
+                                                step.
+                                            </li>
+                                        </ul>
+                                        <div>Enter time sheets: Assuming that time sheets are currently managed
+                                            manually,
+                                            looking at an existing time sheet will be very helpful. It is possible that
+                                            the manual
+                                            time
+                                            sheet will contain some of the information we have already discussed. Is
+                                            there any data
+                                            that we have not recorded yet? Does the system need to record information
+                                            about pay
+                                            rates and payments made to the drivers? We discuss looking at existing
+                                            manual forms
+                                            again in the section “Finding Out More About the Problem.<br></div>
+                                        <div>Work: think a order for a delivery meal service</div>
+                                    </small>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul>
+                                <li>What Is the Objective of the System?</li>
+                                <li class="list-unstyled">
+                                    <small>
+                                        <ul>
+                                            <li>your clients may become quite enthusiastic about broadening the scope
+                                                of the system to include more and more.
+                                            </li>
+                                            <li>everything that could be automated as something that should be
+                                                automated.
+                                            </li>
+                                            <li>keep the scope of the problem as small and tightly defined as possible
+                                            </li>
+                                        </ul>
+                                    </small>
+                                </li>
+                                <li>What Data are Required to Satisfy the Objective?</li>
+                                <li class="list-unstyled">
+                                    <small>
+                                        <ul>
+                                            <li>Revisit each of the tasks with the more clearly stated objective in
+                                                mind
+                                            </li>
+                                        </ul>
+                                        <div>Example:Take order: If we are to provide statistics by month or week, we
+                                            will need
+                                            to record a date. The client has confirmed that there is a price list of
+                                            different
+                                            meals, and it
+                                            would be useful for the receptionist to be able to make selections from this
+                                            list. We
+                                            will
+                                            therefore need an additional task: to enter and maintain information about
+                                            meals and
+                                            their
+                                            prices. The client confirms that the cost of the order is just the total
+                                            cost of all the
+                                            meals.
+                                        </div>
+                                    </small>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="future" style="top: -20px; display: none;">
+                <h2>Main questions II</h2>
+                <ul>
+                    <li>What are the Input Use Cases?</li>
+                    <li class="list-unstyled">
+                        <small>
+                            <ul>
+                                <li>use cases are simply textual descriptions of the ways users interact with the
+                                    system.
+                                </li>
+                                <li>different levels of use case from very high-level descriptions of objectives to very
+                                    low–level
+                                    tasks.
+                                </li>
+                            </ul>
+                            <div class="container">Example:
+                                <div class="row">
+                                    <div class="col-md-6"><img src="./DB_files/usertasks.jpg"></div>
+                                    <div class="col-md-6"><img src="./DB_files/usertasks2.jpg"></div>
+                                </div>
+                            </div>
+                        </small>
+                    </li>
+
+                </ul>
+            </section>
+            <section class="future" style="top: -20px; display: none;">
+                <h2>Main questions III</h2>
+                <ul>
+                    <li>What Is the First Data Model?</li>
+                    <li class="list-unstyled">
+                        <small>
+                            <ul>
+                                <li>separate each of the pieces of data we are recording and put them as attributes in
+                                    the most likely class
+                                </li>
+                                <li>this model is only a first attempt and overlooks some important details that we will
+                                    consider
+                                    later
+                                </li>
+                            </ul>
+                            <div><img src="./DB 2014 -2015_files/firstDataModel.jpg"></div>
+                        </small>
+                    </li>
+                    <li>What Are the Output Use Cases?</li>
+                    <li class="list-unstyled">
+                        <small>
+                            <ul>
+                                <li>need to reconsider the required reporting and summarizing tasks in terms of the data
+                                    we are
+                                    keeping
+                                </li>
+                                <li>It is useful at this point to look at the data we are storing and see what other
+                                    information can
+                                    be deduced.
+                                </li>
+                                <li>Maybe it would be useful to introduce a new
+                                    attribute or class
+                                </li>
+                            </ul>
+                        </small>
+                    </li>
+                </ul>
+            </section>
+            <section class="future" style="top: -20px; display: none;">
+                <h2>Use cases I</h2>
+                <ul>
+                    <li>
+                        <small>We have been using very simple descriptions in our use cases. However, they can contain
+                            much more
+                            information
+                        </small>
+                    </li>
+                    <li>
+                        <small>There are no hard-and-fast rules about what use cases should include or how they should
+                            be
+                            presented.
+                        </small>
+                    </li>
+                    <li>
+                        <small>Start within a simple sentence. The most simple it is, It's the most clar idea you have
+                        </small>
+                    </li>
+                    <li class="list-unstyled">&nbsp;</li>
+                    <li class="list-unstyled">Actors</li>
+                    <li class="list-unstyled">
+                        <small>
+                            <ul>
+                                <li>Representation of a user of our database or system. Allways use "System".</li>
+                                <li>Consider all the different types of people WHICH may interact</li>
+                                <li>Consider the different roles of people likely to interact with the
+                                    system and see the problem from the perspective of each.
+                                </li>
+                                <li>a single role might have many people associated with
+                                    it
+                                </li>
+                            </ul>
+                            <div>Example: receptionist / manager</div>
+                        </small>
+                    </li>
+                    <li class="list-unstyled">&nbsp;</li>
+                    <li class="list-unstyled">Exceptions / Addons / Extensions</li>
+                    <li class="list-unstyled">
+                        <small>
+                            <ul>
+                                <li>Each use case is the place to include any exceptions or problems that might occur
+                                </li>
+                                <li>Thinking about the things that can go wrong at each step helps our understanding of
+                                    the
+                                    problem.
+                                </li>
+                            </ul>
+                            <div>Example:We might include what to do about orders that run past midnight
+                                so as to get the elapsed time correct . We might also include what happens if an order
+                                is not completed for some reason.
+                            </div>
+                        </small>
+                    </li>
+
+                </ul>
+            </section>
+            <section class="future" style="top: -20px; display: none;">
+                <h2>Use Cases II</h2>
+
+                <h3>Readability!</h3>
+                <ul>
+                    <li>Use Cases for Maintaining Data</li>
+                    <li class="list-unstyled">
+                        <small>
+                            <ul>
+                                <li>CRUD operations = Maintain XXXX data</li>
+                                <li>separate
+                                    jobs which are likely to be done at different times
+                                </li>
+                                <li>Don't think in atomic operations</li>
+                                <li>Keep your attention into main operations</li>
+                                <li>for many classes, it is quite reasonable to include these maintenance activities in
+                                    one
+                                    use case and leave the particulars or complex ones to fill them further
+                                </li>
+                                <li>it may be sensible to separate out different aspects of maintaining a particular
+                                    class of data
+                                </li>
+                            </ul>
+                            <div>Example: Administrator (users) can maintain public user data<br>
+                                Public users must create their profile before accessing to the platform
+                            </div>
+                        </small>
+                    </li>
+                    <li>Use Cases for Reporting Information</li>
+                    <li class="list-unstyled">
+                        <small>
+                            <ul>
+                                <li>For many clients, reporting tasks are probably the most significant part of the
+                                    database
+                                    system
+                                </li>
+                                <li>We need to be able to extract objects that meet some criteria and then do something
+                                    with them:
+                                    display them on a screen or web
+                                    page, write them out in a report, group them together, count them, or average or
+                                    total some
+                                    attribute value
+                                </li>
+                                <li>The mechanism for choosing which report to print or which orders to include (this
+                                    week’s or this
+                                    month’s)
+                                    is not a matter for this part of the analysis.
+                                </li>
+                            </ul>
+                        </small>
+                    </li>
+                </ul>
+            </section>
+            <section class="future" style="top: -20px; display: none;">
+                <h2>Summary</h2>
+                <ul>
+                    <li class="list-unstyled">
+                        <small>
+                            <ul>
+                                <li>Determine the main objective of the system.</li>
+                                <li>Determine the jobs different users do in an average day</li>
+                                <li>Brainstorm the data that could be associated with each job.</li>
+                                <li>Agree on the scope of the project and decide on the relevant data.</li>
+                                <li>Sketch data input use cases, consider exceptions, and check existing forms.</li>
+                                <li>Sketch a first data model.</li>
+                                <li>Brainstorm the possible outputs given the data being collected.</li>
+                                <li>Sketch information output use cases.</li>
+                                <li>Check that the data model can readily provide the output information</li>
+                            </ul>
+                        </small>
+                    </li>
+                </ul>
+            </section>
+            <section class="future" style="top: -20px; display: none;">
+                <img src="./DB 2014 -2015_files/dilbert0.gif">
+            </section>
+            <section class="future" style="top: -20px; display: none;">
+                <h2>Minitask III: Flight information System analysis</h2>
+
+                <div>
+                    <small>With the usage of
+                        <a href="https://learning.albertosoto.es/db/media_db/Vision%20Document_MSE_Phase%20I.pdf" target="_blank">this document</a>
+                        &amp;&amp; and <a href="https://learning.albertosoto.es/db/media_db/SDD-ex1.pdf" target="_blank">this document</a>:
+                    </small>
+                </div>
+                <ul>
+                    <li>Think about mistakes on Actors</li>
+                    <li>Find 3 examples of a bad use case</li>
+                    <li>Find 3 examples of a good use case</li>
+                    <li>Add one new User case and describe it</li>
+                    <li>Detect as mistakes as you can</li>
+                </ul>
+            </section>
+            <section class="future" style="top: -20px; display: none;">
+                <img src="./DB 2014 -2015_files/dilbert1.gif" height="100%">
+            </section>
+            <section class="future" style="top: -20px; display: none;">
+                <h2>Minitask IV: Writting my own use cases</h2>
+
+                <div>
+                    The nursery company ask you to build a prototype for managing toy's owners for the playplace.
+                    The nurses will label all toys and need a system to control everything.
+                    Parents can pick their tools and bring them later into the nursery, so you the system must ensure
+                    their
+                    property,
+                    but you must keep the information for getting in and out every object.
+                </div>
+                <ul>
+                    <li>Order and write the requirements unified with the previous application</li>
+                    <li>Write down on paper all the use cases that you can</li>
+                    <li>Describe use cases</li>
+                </ul>
+            </section>
+            <section class="future" style="top: -20px; display: none;">
+                <img src="./DB 2014 -2015_files/dilbert2.gif" height="100%">
+            </section>
+            <section class="future" style="top: -20px; display: none;">
+                <h3>Minitask V: Hotel Booking Service (part I)</h3>
+
+                <div>
+                    Create the requested documentation suitable for a Hotel Book Reservation Engine which can satisfy
+                    this
+                    requirements:
+                </div>
+                <span>Your clients is a backpacker's youth hostel which wants you to design a website on the future. Before starting, they ask you to build their booking engine</span>
+                <small>
+                    <ul>
+                        <li>The client's hotel rooms can be from different types or categories like junior suite,
+                            standard room,
+                            luxury suite, etc
+                        </li>
+                        <li>Hostel's rooms can be shared</li>
+                        <li>Each room can have different kinds of prices depending on season stage, period or hotel
+                            occupation
+                            level. They call this concept "band"
+                        </li>
+                        <li>Each room independently of category have different facilities like tv service, minibar
+                            service and
+                            others
+                        </li>
+                        <li>Each client, from now onward "Guest", sleeps in one bed</li>
+                        <li>One user or "customer" can book several beds</li>
+                        <li>Each "booking" should ensure this data: booking time, start date, end date and remarks</li>
+                        <li>By now, you don't have to check payments until the website it's released</li>
+                        <li>The system must ensure personal Guest Info and Customer Info</li>
+                    </ul>
+                </small>
+            </section>
+            <section class="future" style="top: -20px; display: none;">
+                <h3>Minitask V: Hotel Booking Service (part II)</h3>
+
+                <div>DO the following tasks</div>
+                <ul>
+                    <li>Detect and write Functional requirements</li>
+                    <li>Detect users or actors for the system</li>
+                    <li>Detect Use cases and explain them</li>
+                    <li>Detect entitites</li>
+                    <li>Create your first data model which can satisfy everything</li>
+                </ul>
+            </section>
+            <section class="future" style="top: -20px; display: none;">
+                <!-- mallorca youth hotel -->
+                <h2>Functional Requirement Doc index</h2>
+                <ul>
+                    <li>Purpose
+                        <div>
+                            <small>(es)Brief description on what this document it's used</small>
+                        </div>
+                    </li>
+                    <li>Objective
+                        <div>
+                            <small>(es)System's needs for final customer view</small>
+                        </div>
+                    </li>
+                    <li>Functional requirements
+                        <div>
+                            <small>(en)Describe all requirement in english in a formal way</small>
+                        </div>
+                    </li>
+                    <li>Actors
+                        <div>
+                            <small>(en)Describe your System's users</small>
+                        </div>
+                    </li>
+                    <li>Use case model
+                        <div>
+                            <small>Draw within a tool as an image export your final System use case model</small>
+                        </div>
+                    </li>
+                    <li>Use cases
+                        <div>
+                            <small>
+                                <ul>
+                                    <li>(en)Full list</li>
+                                    <li>(es/en)Use case full description one per one</li>
+                                </ul>
+                            </small>
+                        </div>
+                    </li>
+                    <li>
+                        Data model
+                        <div>
+                            <small>
+                                <ul>
+                                    <li>Data model UML</li>
+                                    <li>(es)FULL DETAILED EXPLICATION</li>
+                                </ul>
+                            </small>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </section>
+        <section hidden="" class="future stack" style="top: -20px; display: none;">
+            <section style="top: -20px; display: none;">
+                <h2>
+                    <a href="https://docs.google.com/document/d/1r9s97-QLq4YH178CbTrdY-ciM7BtB5WQT_R6VaVNK2s/edit?usp=sharing" target="_blank">
+                        MiniTask template &amp; Considerations</a></h2>
+                <ul>
+                    <li>Download it from the link above</li>
+                    <li>Your task content must be served as PDF file.</li>
+                    <li>When you finish it, send by mail to your teacher email address.
+                        Your Task template is EXACTLY this one.
+                        Copy and work on your own gdrive or download it in any format
+                    </li>
+                    <li>By default NO WORK GROUP IS ACCEPTED</li>
+                    <li>All Copied or similar work will have a "0" mark</li>
+                    <li>Email content MUST BE:
+                        <ul>
+                            <li>Subject: {DB/DIW} {DUAL / ONSITE}{minitask + number}</li>
+                            <li>File attached: {name}_{surname}_minitask_{num}.pdf</li>
+                            <li>Filename is lowercase</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+            <section class="future" style="top: -20px; display: none;">
+                <h2>Final 1st assessment projects</h2>
+
+                <div>
+                    <ul>
+                        <li>
+                            Linked In Profile (40% mark)
+                            <div>
+                                <small>
+                                    <ul>
+                                        <li>(en)TO BE DONE on 2nd assessment</li>
+                                    </ul>
+                                </small>
+                            </div>
+                        </li>
+                        <li>
+                            Minitask V (60% mark)
+                            <div>
+                                <small>
+                                    <ul>
+                                        <li>60% of practical mark</li>
+                                        <li>4th Dec 2014 23:55h</li>
+                                        <li>Not allowed later</li>
+                                    </ul>
+                                </small>
+                            </div>
+                        </li>
+                        <li>
+                            Autocheck
+                            <div>
+                                <small>
+                                    <ul>
+                                        <li>2 left</li>
+                                    </ul>
+                                </small>
+                            </div>
+                        </li>
+                        <li>
+                            1 st assessment final exam
+                            <div>
+                                <small>
+                                    <ul>
+                                        <li>11th Dec 2014</li>
+                                    </ul>
+                                </small>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </section>
+        <section hidden="" class="future" style="top: -20px; display: none;">
+            <h2>2nd Assessment</h2>
+
+            <div>
+                <small>8th January 2015 - 15th April 2015</small>
+            </div>
+            <div>
+                <small>
+                    <span>Contents:</span><br>
+                    <ul>
+                        <li>Normalization</li>
+                        <li>Common designing patterns</li>
+                        <li>Setting up standards</li>
+                        <li>Practical knowdledge</li>
+                    </ul>
+                </small>
+            </div>
+        </section>
+        <section hidden="" class="future stack" style="top: -20px; display: none;">
+            <section style="top: -20px; display: none;">
+                <h2>Normalization</h2>
+
+                <div>Process of database normalization in which relations (tables) created from the conversion of the
+                    E-R model
+                    are
+                    analyzed for potential flaws (anomalies) and these flaws are corrected.
+                    <pre>E-R Model  -&gt;  Relational Model  -&gt;  Normalization -&gt; Database</pre>
+                </div>
+                <small>
+                    <ul>
+                        <li>Normalization is a process in which we systematically examine relations for anomalies and,
+                            when
+                            detected, remove those anomalies by splitting up the relation into two new, related,
+                            relations.
+                        </li>
+                        <li>
+                            Normalization is an important part of the database development process: Often during
+                            normalization,
+                            the
+                            database designers get their first real look into how the data are going to interact in the
+                            database.
+                        </li>
+                        <li>
+                            Finding problems with the database structure at this stage is strongly preferred to finding
+                            problems
+                            further along in the development process because at this point it is fairly easy to cycle
+                            back to
+                            the
+                            conceptual model (Entity Relationship model) and make changes.
+                        </li>
+                        <li>
+                            Normalization can also be thought of as a trade-off between data redundancy and performance.
+                            Normalizing
+                            a relation reduces data redundancy but introduces the need for joins when all of the data is
+                            required by
+                            an application such as a report query.
+                        </li>
+                    </ul>
+                </small>
+            </section>
+            <section class="future" style="top: -20px; display: none;">
+                <h2>Relational Model Requeriments</h2>
+
+                <div>
+                    <ul>
+                        <li>Every item should have a valid identifier</li>
+                        <li>Entitys order isn't important</li>
+                        <li>Values are atomical: No repeated values</li>
+                        <li>Relationships are normalized and foreign keys or unique keys are created</li>
+                        <li>Optional and mandatory fields are setup</li>
+                        <li><a href="http://en.wikipedia.org/wiki/Referential_integrity" target="_blank"> Referential
+                            integrity </a>is customized
+                            <ul>
+                                <li>Entity integrity: Primary key attributes couldn't be null (So, children dependency
+                                    or
+                                    master-detail workflow)
+                                </li>
+                                <li>Reference integrity: It's not allowed having relationships to unlinked records (So,
+                                    and ID
+                                    couldn't be modified it's has been used)
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+            </section>
+            <section class="future" style="top: -20px; display: none;">
+                <h3>Normalization summary and tips</h3>
+                <ul>
+                    <li>Check that every entity has an standalone unique identifier</li>
+                    <li>Convert your relationships:
+                        <ul>
+                            <li><b>1 .. 1 Relation:</b><br>
+                                Maybe you should consider your representation model because MAYBE those tables could be
+                                only
+                                one
+                            </li>
+                            <li><b>0,1 .. N Relation:</b><br>
+                                You'll create a new field in your relation ship, usign a foreign key in entity with
+                                cardinallity 0,1 as a field optional or no with a foreign key linking to N entity
+                            </li>
+                            <li><b>N .. M Relation:</b><br>
+                                A new table will be created using each entity as a foreign key inside an unique index.
+                                Avoid using multiple primary keys for that new table. Usually it's a better pattern
+                                using a new
+                                autoincrement primary key with other foreign key attributes as an unique index
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+            <section class="future" style="top: -20px; display: none;">
+                <h2>Annotation types</h2>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">Various methods of representing the same one to many relationship. In each
+                            case,
+                            the diagram shows the
+                            relationship between a person and a place of birth: each person must have been born at one,
+                            and only
+                            one,
+                            location, but each location may have had zero or more people born at it.
+                        </div>
+                        <div class="col-md-6"><img src="./DB_files/320px-ERD_Representation.svg.png"></div>
+                    </div>
+                </div>
+
+            </section>
+            <section class="future" style="top: -20px; display: none;">
+                <h2>Minitask VI</h2>
+
+                <div>
+                    <small>
+                        You'll start working in real content creation for your official documentation about database
+                        creation.
+                        <br>
+                        Convert your <a href="https://learning.albertosoto.es/db/DB.html#/4">Minitask I</a> &amp; <a href="https://learning.albertosoto.es/db/DB.html#/4/1">Minitask II</a> into valid diagram
+                        for database creation using the techniques explained at
+                        class.
+                    </small>
+                </div>
+                <h4><br>Tools and contents:</h4>
+                <ul>
+                    <li><a href="https://www.draw.io/" target="_blank">Draw IO
+                        <small>(online)</small>
+                    </a> or <a href="http://astah.net/" target="_blank">Astah</a> for ER Diagram
+                    </li>
+                    <li>
+                        <a href="http://www.vertabelo.com/" target="_blank">Vertabelo
+                            <small>(online)</small>
+                        </a>
+                        or <a href="http://www.mysql.com/products/workbench/">Mysql Workbench </a>for Relational
+                        Model
+                    </li>
+
+                </ul>
+                <h4><br>Objective:</h4>
+                <ul>
+                    <li>Start creating valid UML annotations for my project's startup</li>
+                    <li>Convert my UML or Chen ER diagram into a Relational Model before start with normalization
+                        process
+                    </li>
+                    <li>Detect differences and every step to be done in my DB Design process</li>
+                </ul>
+
+            </section>
+            <section class="future" style="top: -20px; display: none;">
+                <h2>Minitask VII: burst your brain out</h2>
+
+                <div>
+                    <small>
+                        Do you remember your <a href="https://learning.albertosoto.es/db/DB.html#/5/9">Minitask III</a>?
+                        <br>
+                        Start thinking in a good way for building a booking engine for flights using all the "good"
+                        concepts done in your Minitask III.
+                        Read again everything, and write down all the valid requirements. After having your own
+                        requirements, order them, analyze them,
+                        and try building a database system which fits them all.
+                    </small>
+                </div>
+                <h4><br>Objective:</h4>
+                <ul>
+                    <li>Review requeriments documentation</li>
+                    <li>Improve your knowledge in common case tools</li>
+                    <li>Break your mind and make your self ill</li>
+                </ul>
+            </section>
+            <section class="future" style="top: -20px; display: none;">
+                <h2>On site task: Improve ER &amp; Relational Model</h2>
+
+                <div>Work in this new concept and try finding the best suitable solution. We'll discuss about it in
+                    classtime. Chrono time: 1,5 hour
+                </div>
+                <small>
+                    <div>
+                        You want to create a small social website for students and teachers in a different way:
+                        <br>
+                        Teachers share with others teachers their lessons to discuss and create a better feedback. So,
+                        your school wants you to create a database which allows the following concepts:
+                        <ul>
+                            <li>
+                                Every group can have different teachers. And all teachers are available to manage only
+                                their groups
+                            </li>
+                            <li>
+                                Teachers create events for every lesson they want to discuss, so they could set an
+                                specific date and work on it. Every event or class should ensure student's group, and
+                                related course
+                            </li>
+                            <li>In every created lesson, all associted teachers can improve the contents or task to be
+                                done
+                            </li>
+                            <li>When some teacher makes a change, the system should send a message to the other
+                                associated teachers
+                            </li>
+                            <li>Teachers can rate every lesson</li>
+                            <li>The system should store all messages independently to lesson, but relating them like in
+                                a chat
+                            </li>
+                            <li>Every teacher has a public profile in the website</li>
+                        </ul>
+                    </div>
+                </small>
+            </section>
+        </section>
+        <section hidden="" class="future stack" style="top: -20px; display: none;">
+            <section style="top: -20px; display: none;">
+                <h2>ER Model to Relational Model</h2>
+                <small>
+                    <table class="table table-bordered ">
+                        <colgroup>
+                            <col class="col-xs-4">
+                            <col class="col-xs-4">
+                            <col class="col-xs-4">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th>Concept</th>
+                            <th>ER Model</th>
+                            <th>Relational Model</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>PK?</td>
+                            <td>Yes</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>FK?</td>
+                            <td>No</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Cardinallity</td>
+                            <td>0,1-0,1<br>0,1-N<br>N-N</td>
+                            <td>ONLY 0,1-N <br> (FK Nature)</td>
+                        </tr>
+                        <tr>
+                            <td>Valid annotation types</td>
+                            <td>Chen,ISO,UML</td>
+                            <td>IDEFIX,Bachman,IE (international),UML</td>
+                        </tr>
+
+                        <tr>
+                            <td>UQ mandatory?</td>
+                            <td>No</td>
+                            <td>If exists</td>
+                        </tr>
+                        <tr>
+                            <td>DataTypes mandatory?</td>
+                            <td>No</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Relation Name</td>
+                            <td>Yes</td>
+                            <td>It helps</td>
+                        </tr>
+                        <tr>
+                            <td>DB Annotation mandatory?</td>
+                            <td>No</td>
+                            <td>Yes</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </small>
+            </section>
+            <section class="future" style="top: -20px; display: none;">
+                <h2>Standarized annotation</h2>
+                <small>
+                    <table class="table table-bordered ">
+                        <colgroup>
+                            <col class="col-xs-4">
+                            <col class="col-xs-4">
+                            <col class="col-xs-4">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th>Concept</th>
+                            <th>ER Model</th>
+                            <th>Relational Model</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Entity/Table/Class name</td>
+                            <td><strong>PascalCase</strong> - "ItemData"</td>
+                            <td><strong>under_case</strong> - "item_data"</td>
+                        </tr>
+                        <tr>
+                            <td>PK</td>
+                            <td>id</td>
+                            <td>id</td>
+                        </tr>
+                        <tr>
+                            <td>attribute</td>
+                            <td><strong>camelCase</strong> - "creationDate"</td>
+                            <td><strong>under_case</strong> - "creation_date"</td>
+                        </tr>
+                        <tr>
+                            <td>FK field</td>
+                            <td>Not exists</td>
+                            <td><strong>{table}_id</strong> - "item_id"</td>
+                        </tr>
+                        <tr>
+                            <td>FK_name</td>
+                            <td>Not exist</td>
+                            <td><strong>FK_{CURRENT_TABLE}_{index}_</strong> - "FK_ITEM_0"</td>
+                        </tr>
+                        <tr>
+                            <td>UQ_name</td>
+                            <td>Not exist</td>
+                            <td><strong>UQ_{CURRENT_TABLE}_{index}</strong> - "UQ_ITEM_0"</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </small>
+            </section>
+            <!--section>
+                <h2>Normalize like a pro</h2>
+                <div>
+                    <div>Functional Dependencies</div>
+                    <small>
+                        <ul>
+                            <li>
+                                A Functional Dependency describes a relationship between attributes within a single
+                                relation.
+                            </li>
+                            <li>
+                                An attribute is functionally dependent on another if we can use the value of one
+                                attribute to
+                                determine the value of another.
+                            </li>
+                            <li>
+                                Example: Employee_Name is functionally dependent on Social_Security_Number because
+                                Social_Security_Number can be used to uniquely determine the value of Employee_Name.
+                            </li>
+                            <li>
+                                We use the arrow symbol → to indicate a functional dependency.
+                            </li>
+                            <li>
+                                X → Y is read X functionally determines Y
+                            </li>
+                        </ul>
+                        <div>
+                            The attributes listed on the left hand side of the → are called determinants.<br/>
+                            One can read A → B as, “A determines B”. Or more specifically: Given a value for A, we can
+                            uniquely
+                            determine one value for B.
+                            <br/>
+                            CarModel, Options, TaxRate → Car_Price
+                        </div>
+                    </small>
+                </div>
+            </section-->
+
+        </section>
+        <section hidden="" class="future stack" style="top: -20px; display: none;">
+            <section style="top: -20px; display: none;">
+                <h2>3rd Assessment</h2>
+
+                <div>
+                    <small>April 2015 - June 2015</small>
+                </div>
+                <div>
+                    <small>
+                        <span>Contents:</span><br>
+                        <ul>
+                            <li>Final Project</li>
+                            <li>Common designing patterns</li>
+                        </ul>
+                    </small>
+                </div>
+            </section>
+            <section class="future" style="top: -20px; display: none;">
+                <h2>Final project</h2>
+
+                <div>
+                    <small>Social Event Calendar App</small>
+                    <br>
+                    Discover with an interview all the requirements needed for building your final project.
+                    Prepare before class-time your questions and ask the client which are the basic details
+                    for creating a suitable database for their application
+                    <br>
+                </div>
+                <div>
+                    <small>
+                    <span>
+                        <ul>
+                            <li>Interview with client: 23/04/15 &amp;&amp; 30/04/15</li>
+                            <li>Delivery project date: 31th May 2015</li>
+                            <li>Project Content:
+                                <ul>
+                                    <li><b>Purpose</b> (es):Brief description on what this document it's used</li>
+                                    <li><b>Objective</b> (es):System's needs for final customer view</li>
+                                    <li><b>Interview (en): Write all questions asked to the client. </b></li>
+                                    <li><b>Functional requirements</b> (en): Describe all requirement in english in a
+                                        formal way.
+                                    </li>
+                                    <li><b>Actors</b> (en):Describe your System's users</li>
+                                    <li><b>Use case diagram</b> (en): Draw within a tool as an image export</li>
+                                    <li><b>Use cases</b> (en): Full use case list enumeration</li>
+                                    <li><b>Use case description</b> (es/en): Use case full description one per one</li>
+                                    <li><b>Data Model / UML</b> (es): With detailed explication</li>
+                                    <li><b>ERM</b> (es): With detailed explication focused on real problems</li>
+                                    <li>Generated SQL &amp; basic tests for MYSQL (2beDefined)</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </span>
+                    </small>
+                </div>
+            </section>
+            <section class="future" style="top: -20px; display: none;">
+                <h2>Project sending requirements</h2>
+
+                <p>Send an email to fp.alberto.soto@gmail.com with 2 attachments: a PDF file, and a SQL file. It won't
+                    be accepted anyother format</p>
+                <small>
+                    <div>Considerations:</div>
+                    <ul>
+                        <li>PDF file. Full report documentation with project requirements as defined in previous screen</li>
+                        <li>SQL file. Export your database with an MYSQL setting STRUCTURE &amp; DATA into a TRANSACTION</li>
+                        <li>Database name: "daw_{initials}" (dual) / "daw_{companyname}" (on-site), bracets is something to replace</li>
+                        <li>PDF filename: "dbproject_{full_name}".pdf (dual) / "dbproject_{companyname}".pdf (on-site)</li>
+                        <li>SQL filename: "dbproject_{full_name}".sql (dual) / "dbproject_{companyname}".sql (on-site)</li>
+                        <li>Email Subject: "db {onsite/dual} finalProject - {full names}"</li>
+                        <li>Remember: Ensure to put your names near your company name</li>
+                    </ul>
+                </small>
+            </section>
+        </section>
+        <section hidden="" class="future stack" style="top: -20px; display: none;">
+            <section style="top: -20px; display: none;">
+                <h2>(Old fashioned, 2007) Common mistakes on database design</h2>
+                <ul>
+                    <li>Poor design/planning</li>
+                    <li>Ignoring normalization *</li>
+                    <li>Poor naming standards</li>
+                    <li>Lack of documentation</li>
+                    <li>One table to hold all domain values *</li>
+                    <li>Using identity/guid columns as your only key</li>
+                    <li>Not using SQL facilities to protect data integrity *</li>
+                    <li>Not using stored procedures to access data *</li>
+                    <li>Trying to build generic objects *</li>
+                    <li>Lack of testing</li>
+                </ul>
+            </section>
+            <section class="future" style="top: -20px; display: none;">
+                <h2>MSTKS- Poor design/planning</h2>
+                <small>
+                    <div>Admittedly it is impossible to predict every need that your design will have to fulfill and
+                        every issue that is likely to arise, but it is important to mitigate against potential problems
+                        as much as possible, by careful planning.
+                    </div>
+                </small>
+                <h2 style="padding-top: 10px;">Ignoring normalization</h2>
+                <small>
+                    <div>Normalization defines a set of methods to break down tables to their constituent parts until
+                        each table represents one and only one "thing", and its columns serve to fully describe only the
+                        one "thing" that the table represents.
+                    </div>
+                    <table>
+                        <tbody><tr>
+                            <td style="width: 50%;">Consider the following example Customer table</td>
+                            <td style="width: 50%;">Are there always 12 payments? Is the order of payments significant?
+                                Does a NULL value for a payment mean UNKNOWN (not filled in yet), or a missed payment?
+                                And when was the payment made?!?
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><img src="./DB_files/354-image002.gif"></td>
+                            <td><img src="./DB_files/354-image004.gif"></td>
+                        </tr>
+                    </tbody></table>
+                </small>
+            </section>
+            <section class="future" style="top: -20px; display: none;">
+                <h2>MSTKS- One table to hold all domain values [old, someway]</h2>
+                <small>
+                    <div>
+                        Supossed needs:
+                        <ul>
+                            <li>Customer CreditStatus</li>
+                            <li>Customer Type</li>
+                            <li>Invoice Status</li>
+                            <li>Invoice Line Item BackOrder Status</li>
+                            <li>Invoice Line Item Ship Via Carrier</li>
+                        </ul>
+                        <table>
+                            <tbody><tr>
+                                <td><img src="./DB_files/354-image006.gif"></td>
+                                <td><img src="./DB_files/354-image008.gif"></td>
+                            </tr>
+                        </tbody></table>
+                        <ul>
+                            <li>Data can be validated using foreign key constraints very naturally,</li>
+                            <li>Data independency and easier future extensions</li>
+                            <li>Domain tables fits on a single page on load. Ensures a single and faster read</li>
+                        </ul>
+                    </div>
+                </small>
+            </section>
+            <section class="future" style="top: -20px; display: none;">
+                <h2>MSTKS- Not using SQL facilities to protect data integrity [*]</h2>
+                <small>
+                    <div>
+                        <div>Consider the rule a little more closely. There are elements of it that will probably never
+                            change. Example:
+                        </div>
+                        <div>
+                            <ul>
+                                <li>The maximum discount it is ever possible to offer</li>
+                                <li>The fact that the approver must be a manager</li>
+                            </ul>
+                        </div>
+                        <div>
+                            These aspects of the business rule very much ought to get enforced by the database and
+                            design.
+                            Even if the substance of the rule is implemented in the business layer, you are still going
+                            to
+                            have a table in the database that records the size of the discount, the date it was offered,
+                            the
+                            ID of the person who approved it, and so on. On the Discount column, you should have a CHECK
+                            constraint that restricts the values allowed in this column to between 0.00 and 0.90 (or
+                            whatever the maximum is).
+                        </div>
+                    </div>
+                </small>
+            </section>
+            <section class="future" style="top: -20px; display: none;">
+                <h2>MSTKS- Not using stored procedures to access data</h2>
+
+                <div> Use them whenever possible as a method to insulate the database layer from the users of the data
+                    <small>(R U sure?, what's about MVC and ORM?...so NO!)</small>
+                </div>
+                <small>
+                    <div>
+                        <ul>
+                            <li>[-] Maintainability:Stored procedures provide a known interface to the data, and to me,
+                                this
+                                is probably the largest draw. When code that accesses the database is compiled into a
+                                different layer, performance tweaks cannot be made without a functional programmer's
+                                involvement. Stored procedures give the database professional the power to change
+                                characteristics of the database code without additional resource involvement, making
+                                small changes, or large upgrades (for example changes to SQL syntax) easier to do.
+                            </li>
+                            <li>
+                                [+] Encapsulation:Stored procedures allow you to "encapsulate" any structural changes
+                                that
+                                you need to make to the database so that the knock on effect on user interfaces is
+                                minimized. For example, say you originally modeled one phone number, but now want an
+                                unlimited number of phone numbers. You could leave the single phone number in the
+                                procedure call, but store it in a different table as a stopgap measure, or even
+                                permanently if you have a "primary" number of some sort that you always want to display.
+                                Then a stored proc could be built to handle the other phone numbers. In this manner the
+                                impact to the user interfaces could be quite small, while the code of stored procedures
+                                might change greatly.
+                            </li>
+                        </ul>
+                    </div>
+                </small>
+            </section>
+            <section class="future" style="top: -20px; display: none;">
+                <h2>MSTKS- Not using stored procedures to access data (II)</h2>
+                <small>
+                    <div>
+                        <ul>
+                            <li>
+                                [+] Security:Stored procedures can provide specific and granular access to the system.
+                                For
+                                example, you may have 10 stored procedures that all update table X in some way. If a
+                                user needs to be able to update a particular column in a table and you want to make sure
+                                they never update any others, then you can simply grant to that user the permission to
+                                execute just the one procedure out of the ten that allows them perform the required
+                                update.
+                            </li>
+                            <li>
+                                [+] Performance:
+                                There are a couple of reasons that I believe stored procedures enhance performance.
+                                First, if a newbie writes ratty code (like using a cursor to go row by row through an
+                                entire ten million row table to find one value, instead of using a WHERE clause), the
+                                procedure can be rewritten without impact to the system (other than giving back valuable
+                                resources.)
+                            </li>
+                            <li>
+                                [++++] Triggers and jobs!!
+                            </li>
+                        </ul>
+                    </div>
+                </small>
+            </section>
+            <section class="future" style="top: -20px; display: none;">
+                <h2>MSTKS- Trying to build generic objects</h2>
+                <small>
+                    <div>About dynamic SQL procedures. Dynamic SQL is a great tool to use when you have procedures that
+                        are not optimizable / manageable otherwise. A good example is a search procedure with many
+                        different choices. A precompiled solution with multiple OR conditions might have to take a worst
+                        case scenario approach to the plan and yield weak results, especially if parameter usage is
+                        sporadic.
+
+                        However, the main point of this tip is that you should avoid coding very generic objects, such
+                        as ones that take a table name and twenty column names/value pairs as a parameter and lets you
+                        update the values in the table. For example, you could write a procedure that started out:
+                    </div>
+                    <pre>                            CREATE PROCEDURE updateAnyTable
+                            @tableName sysname,
+                            @columnName1 sysname,
+                            @columnName1Value varchar(max)
+                            @columnName2 sysname,
+                            @columnName2Value varchar(max)
+                    </pre>
+                    <div>Useful links:</div>
+                    <ul>
+                        <li><a href="http://docs.oracle.com/cd/E11882_01/appdev.112/e25519/dynamic.htm#LNPLS01115" target="_blank">Dynamic SQL I</a></li>
+                        <li><a href="http://docs.oracle.com/cd/B10501_01/appdev.920/a96590/adg09dyn.htm" target="_blank">Dynamic SQL II</a></li>
+                    </ul>
+                </small>
+            </section>
+        </section>
+        <section hidden="" class="future stack" style="top: 0px; display: block;">
+            <!--section>
+                <h2>Patterns</h2>
+                <ul>
+                    <li>Master-Detail</li>
+                    <li>Tree / Hierarchical</li>
+                    <li>Auditing</li>
+                    <li>RBAC System</li>
+                    <li>Storing data with variable structure</li>
+                </ul>
+            </section-->
+            <section style="top: -215px; display: block;">
+                <h3>Antipatterns: Polymorphic associations</h3>
+                <small>
+                    <div>Let’s allow users to make comments on bugs. A given bug may have
+                        many comments, but any given comment must pertain to a single bug.
+                        So, there’s a one-to-many relationship between Bugs and Comments. However, you might have two
+                        tables you can comment on. Bugs and FeatureRequests
+                        are similar entities, although you might store them as separate
+                        tables.
+                        You’d like to store Comments in a single table regardless of whether they
+                        pertain to either type of issue—a bug or a feature—but you can’t declare
+                        a foreign key that references multiple parent tables
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                                                <pre>CREATE TABLE Comments (
+comment_id SERIAL PRIMARY KEY,
+bug_id BIGINT UNSIGNED NOT NULL,
+author_id BIGINT UNSIGNED NOT NULL,
+comment_date DATETIME NOT NULL,
+comment TEXT NOT NULL,
+FOREIGN KEY (author_id) REFERENCES Accounts(account_id),
+FOREIGN KEY (bug_id) REFERENCES Bugs(bug_id)
+);</pre>
+                        </div>
+                        <div class="col-md-6">
+                            <img src="./DB_files/anti_poly.jpg">
+                        </div>
+                    </div>
+
+
+                </small>
+            </section>
+            <section class="future" style="top: -262px; display: block;">
+                <h3>Antipattern: Use Dual-Purpose Foreign Key</h3>
+                <small>
+                    <div class="row">
+                        <div class="col-md-6">To make Polymorphic Associations work, you must add an extra string
+                            column alongside the foreign key on issue_id. The extra column contains
+                            the name of the parent table referenced by the current row. In
+                            this example, the new column is called issue_type, and it contains either
+                            Bugs or FeatureRequests, corresponding to the names of the two possible
+                            parent tables in this association.
+                        </div>
+                        <div class="col-md-6">
+                            <pre>CREATE TABLE Comments (
+comment_id SERIAL PRIMARY KEY,
+issue_type VARCHAR(20), -- "Bugs" or "FeatureRequests"
+issue_id BIGINT UNSIGNED NOT NULL,
+author BIGINT UNSIGNED NOT NULL,
+comment_date DATETIME,
+comment TEXT,
+FOREIGN KEY (author) REFERENCES Accounts(account_id)
+);</pre>
+                        </div>
+                    </div>
+                    <h4>How to Recognize the Antipattern</h4>
+                    <ul>
+                        <li>“This tagging schema allows you to associate a tag (or other attribute)
+                            with any other resource in the database.”you should be suspicious of any claims of unlimited
+                            flexibility
+                        </li>
+                        <li>“You can’t declare foreign keys in our database design.”Foreign keys are a fundamental
+                            feature
+                            of relational databases, and a design that can’t work with proper
+                            referential integrity has a lot of problems.
+                        </li>
+                        <li>Any foreign key must reference the same table on all rows</li>
+                    </ul>
+                </small>
+            </section>
+            <section class="future" style="top: -287.5px; display: block;">
+                <h3>Solution: Simplify the Relationship</h3>
+                <h4>Reverse the Reference</h4>
+                <small>
+                    <div class="row">
+                        <div class="col-md-6"><img src="./DB_files/anti_poly_sol1.jpg"></div>
+                        <div class="col-md-6">A foreign key in the child table Comments can’t reference multiple parent
+                            tables, so instead, use multiple foreign keys to reference the Comments
+                            table. Create a separate intersection table for each parent table, and in
+                            each intersection table include a foreign key to Comments, as well as a
+                            foreign key to the respective parent table.
+                        <pre>CREATE TABLE BugsComments (
+issue_id BIGINT UNSIGNED NOT NULL,
+comment_id BIGINT UNSIGNED NOT NULL,
+PRIMARY KEY (issue_id, comment_id),
+FOREIGN KEY (issue_id) REFERENCES Bugs(issue_id),
+FOREIGN KEY (comment_id) REFERENCES Comments(comment_id)
+);
+CREATE TABLE FeaturesComments (
+issue_id BIGINT UNSIGNED NOT NULL,
+comment_id BIGINT UNSIGNED NOT NULL,
+PRIMARY KEY (issue_id, comment_id),
+FOREIGN KEY (issue_id) REFERENCES FeatureRequests(issue_id),
+FOREIGN KEY (comment_id) REFERENCES Comments(comment_id)
+);</pre>
+                        </div>
+                    </div>
+                </small>
+            </section>
+            <section class="future" style="top: -350px; display: block;">
+                <h3>Solution: Simplify the Relationship</h3>
+                <h4>Create a Common Super-Table</h4>
+                <small>
+                    <div class="row">
+                        <div class="col-md-6"><img src="./DB_files/anti_poly_sol2.jpg"></div>
+                        <div class="col-md-6">In object-oriented polymorphism, two subtypes can be referenced similarly
+                            because they implicitly share a common supertype. In SQL, the
+                            Polymorphic Associations antipattern leaves out that crucial entity: the
+                            common supertype. You can fix that by creating a base table that all of
+                            your parent tables extend. Add the foreign key in the child Comments table to reference
+                            the base table. You don’t need an issue_type column.
+                        <pre>CREATE TABLE Comments (
+comment_id SERIAL PRIMARY KEY,
+issue_id BIGINT UNSIGNED NOT NULL,
+author BIGINT UNSIGNED NOT NULL,
+comment_date DATETIME,
+comment TEXT,
+FOREIGN KEY (issue_id) REFERENCES Issues(issue_id),
+FOREIGN KEY (author) REFERENCES Accounts(account_id),
+);
+CREATE TABLE Issues (
+issue_id SERIAL PRIMARY KEY
+);
+CREATE TABLE Bugs (
+issue_id BIGINT UNSIGNED PRIMARY KEY,
+FOREIGN KEY (issue_id) REFERENCES Issues(issue_id),
+. . .
+);
+CREATE TABLE FeatureRequests (
+issue_id BIGINT UNSIGNED PRIMARY KEY,
+FOREIGN KEY (issue_id) REFERENCES Issues(issue_id),
+. . .
+);</pre>
+                        </div>
+                    </div>
+                </small>
+            </section>
+        </section>
+        <section hidden="" class="future stack" style="top: 0px; display: block;">
+            <section style="top: -345px; display: block;">
+                <h3>Antipatterns: Jaywalking</h3>
+                <small>
+                    <div class="row">
+                        <div class="col-md-6">You’re developing a feature in the bug-tracking application to designate
+                            a user as the primary contact for a product. Your original design allowed
+                            only one user to be the contact for each product. However, it was no
+                            surprise when you were requested to support assigning multiple users
+                            as contacts for a given product.At the time, it seemed simple to change the database to
+                            store a list
+                            of user account identifiers separated by commas, instead of the single
+                            identifier it used before.
+                            Soon your boss approaches you with a problem. “The engineering department
+                            has been adding associate staff to their projects. They tell me
+                            they can add five people only. If they try to add more, they get an error.
+                            What’s going on?”
+                            You nod, “Yeah, you can only list so many people on a project,” as
+                            though this is completely ordinary.
+                        </div>
+                        <div class="col-md-6">
+                            <pre>CREATE TABLE Products (
+product_id SERIAL PRIMARY KEY,
+product_name VARCHAR(1000),
+account_id BIGINT UNSIGNED,
+-- . . .
+FOREIGN KEY (account_id) REFERENCES Accounts(account_id)
+);
+INSERT INTO Products (product_id, product_name, account_id)
+VALUES (DEFAULT, 'Visual TurboBuilder' , 12);
+CREATE TABLE Products (
+product_id SERIAL PRIMARY KEY,
+product_name VARCHAR(1000),
+account_id VARCHAR(100), -- comma-separated list
+-- . . .
+);
+INSERT INTO Products (product_id, product_name, account_id)
+VALUES (DEFAULT, 'Visual TurboBuilder' , '12,34' );
+                            </pre>
+
+                        </div>
+                    </div>
+                    <div class="row"><br>
+
+                        <div class="col-md-12">
+                            <ul>
+                                <li>Queries are difficult if all the foreign keys are combined into a single
+                                    field.
+                                </li>
+                                <li>it’s awkward and costly to join a comma-separated list to
+                                    matching rows in the referenced table.
+                                </li>
+                                <li>Aggregate queries use functions like COUNT( ), SUM( ), and AVG( ). However,
+                                    these functions are designed to be used over groups of rows, not
+                                    comma-separated lists.
+                                </li>
+                                <li>To remove an item from the list, you have to run two SQL queries</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </small>
+            </section>
+            <section class="future" style="top: -221px; display: block;">
+                <h3>Solution: Create an Intersection Table</h3>
+                <small>
+                    <div class="row">
+                        <div class="col-md-6"><pre>CREATE TABLE Contacts (
+product_id BIGINT UNSIGNED NOT NULL,
+account_id BIGINT UNSIGNED NOT NULL,
+PRIMARY KEY (product_id, account_id),
+FOREIGN KEY (product_id) REFERENCES Products(product_id),
+FOREIGN KEY (account_id) REFERENCES Accounts(account_id)
+);
+INSERT INTO Contacts (product_id, accont_id)
+VALUES (123, 12), (123, 34), (345, 23), (567, 12), (567, 34);</pre>
+                        </div>
+                        <div class="col-md-6">
+                            When the table has foreign keys referencing two tables, it’s called an
+                            intersection table. This implements a many-to-many relationship between
+                            the two referenced tables. That is, each product may be associated
+                            through the intersection table to multiple accounts, and likewise
+                            each account may be associated to multiple products.
+                        </div>
+                        <div class="col-md-12">
+                            <img src="./DB_files/anti_jay1.jpg">
+                        </div>
+                    </div>
+                </small>
+            </section>
+        </section>
+        <section hidden="" class="future stack" style="top: 0px; display: block;">
+            <section style="top: -255px; display: block;">
+                <h3>Antipatterns: Naive Trees</h3>
+                <small>
+                    <div class="row">
+                        <div class="col-md-6">Readers can contribute comments and
+                            even reply to each other, forming threads of discussion that branch
+                            and extend deeply. You choose a simple solution to track these reply
+                            chains: each comment references the comment to which it replies
+                        </div>
+                        <div class="col-md-6"><pre>CREATE TABLE Comments (
+comment_id SERIAL PRIMARY KEY,
+parent_id BIGINT UNSIGNED,
+comment TEXT NOT NULL,
+FOREIGN KEY (parent_id) REFERENCES Comments(comment_id)
+);</pre>
+                        </div>
+                    </div>
+                    <div class="row">
+
+                        <div class="col-md-12"><br>It soon becomes clear, however, that it’s hard to retrieve a long
+                            chain
+                            of replies in a single SQL query. You can get only the immediate children
+                            or perhaps join with the grandchildren, to a fixed depth. But the
+                            threads can have an unlimited depth. You would need to run many SQL
+                            queries to get all the comments in a given thread.<br><br>
+                            The other idea you have is to retrieve all the comments and assemble
+                            them into tree data structures in application memory, using traditional
+                            tree algorithms you learned in school. But the publishers of the website
+                            have told you that they publish dozens of articles every day, and each
+                            article can have hundreds of comments. Sorting through millions of
+                            comments every time someone views the website is impractical.
+                        </div>
+                    </div>
+                </small>
+            </section>
+            <section class="future" style="top: -350px; display: block;">
+                <h3>Antipattern: Always Depend on One’s Parent</h3>
+                <small>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="./DB_files/anti_tree1.jpg"><pre>CREATE TABLE Comments (
+comment_id SERIAL PRIMARY KEY,
+parent_id BIGINT UNSIGNED,
+bug_id BIGINT UNSIGNED NOT NULL,
+author BIGINT UNSIGNED NOT NULL,
+comment_date DATETIME NOT NULL,
+comment TEXT NOT NULL,
+FOREIGN KEY (parent_id) REFERENCES Comments(comment_id),
+FOREIGN KEY (bug_id) REFERENCES Bugs(bug_id),
+FOREIGN KEY (author) REFERENCES Accounts(account_id)
+);</pre>
+                        </div>
+                        <div class="col-md-6">This design is called Adjacency List. It’s probably the most common
+                            design software developers use to store hierarchical data. The following
+                            is some sample data to show a hierarchy of comments.<br><br>
+                            <h5>How to Recognize the Antipattern</h5>
+                            <ul>
+                                <li>“How many levels do we need to support in trees?”
+                                    You’re struggling to get all descendants or all ancestors of a node,
+                                    without using a recursive query.
+                                </li>
+                                <li>“I dread ever having to touch the code that manages the tree data
+                                    structures.”
+                                    You’ve adopted one of the more sophisticated solutions of managing
+                                    hierarchies, but you’re using the wrong one. Each technique
+                                    makes some tasks easier, but usually at the cost of other tasks
+                                    that become harder.
+                                </li>
+                                <li>“I need to run a script periodically to clean up the orphaned rows
+                                    in the trees.”
+                                    Your application creates disconnected nodes in the tree as it deletes
+                                    nonleaf nodes.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12"><br><h5>The Adjacency List design might be just fine to support the work
+                            you
+                            need to do in your application. The strength of the Adjacency List design
+                            is retrieving the direct parent or child of a given node. It’s also easy
+                            to insert rows. If those operations are all you need to do with your
+                            hierarchical data, then Adjacency List can work well for you.</h5></div>
+                    </div>
+                </small>
+            </section>
+            <section class="future" style="top: -20px; display: none;">
+                <h3>Antipattern: Always Depend on One’s Parent</h3>
+                <small>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5>Maintaining a Tree with Adjacency List</h5>
+                            <ul>
+                                <li>Admittedly, some operations are simple to accomplish with Adjacency
+                                    List, such as adding a new leaf node
+                                    <pre>INSERT INTO Comments (bug_id, parent_id, author, comment)
+VALUES (1234, 7, 'Kukla' , 'Thanks!' );</pre>
+                                </li>
+                                <li>Relocating a single node or a subtree is also easy:<pre>UPDATE Comments SET parent_id = 3 WHERE comment_id = 6;
+                                </pre>
+                                </li>
+                                <li>However, deleting a node from a tree is more complex. If you want to
+                                    delete an entire subtree, you have to issue multiple queries to find all
+                                    descendants. Then remove the descendants from the lowest level up to
+                                    satisfy the foreign key integrity.
+                                    <pre>SELECT comment_id FROM Comments WHERE parent_id = 4; -- returns 5 and 6
+SELECT comment_id FROM Comments WHERE parent_id = 5; -- returns none
+SELECT comment_id FROM Comments WHERE parent_id = 6; -- returns 7
+SELECT comment_id FROM Comments WHERE parent_id = 7; -- returns none
+DELETE FROM Comments WHERE comment_id IN ( 7 );
+DELETE FROM Comments WHERE comment_id IN ( 5, 6 );
+DELETE FROM Comments WHERE comment_id = 4;</pre>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h5>Querying a Tree with Adjacency List</h5>
+                            <ul>
+                                <li>Adjacency List can be an antipattern when it’s the default choice of so
+                                    many developers yet it fails to be a solution for one of the most common
+                                    tasks you need to do with a tree: query all descendants
+                                </li>
+                                <li>However, this queries only two levels of the tree. One characteristic of a
+                                    tree is that it can extend to any depth, so you need to be able to query
+                                    the descendents without regard to the number of levels. For example,
+                                    you may need to compute the COUNT( ) of comments in the thread or
+                                    the SUM( ) of the cost of parts in a mechanical assembly.
+                                </li>
+                            </ul>
+                            <pre>SELECT c1.*, c2.*, c3.*, c4.*
+FROM Comments c1 -- 1st level
+LEFT OUTER JOIN Comments c2
+ON c2.parent_id = c1.comment_id -- 2nd level
+Report erratum
+this copy is (P1.0 printing, May 2010)
+ANTIPATTERN: ALWAYS DEPEND ON ONE’S PARENT 38
+LEFT OUTER JOIN Comments c3
+ON c3.parent_id = c2.comment_id -- 3rd level
+LEFT OUTER JOIN Comments c4
+ON c4.parent_id = c3.comment_id; -- 4th level</pre>
+                        </div>
+                    </div>
+                </small>
+            </section>
+            <section class="future" style="top: -20px; display: none;">
+                <h3>Solution: Use Alternative Tree Models</h3>
+                <h4>Path Enumeration or Materialized path <a href="https://bojanz.wordpress.com/2014/04/25/storing-hierarchical-data-materialized-path/" target="_blank">[¿?]</a></h4>
+                <small>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="./DB_files/anti_tree_sol1.jpg">
+                            <pre>CREATE TABLE Comments (
+comment_id SERIAL PRIMARY KEY,
+path VARCHAR(1000),
+bug_id BIGINT UNSIGNED NOT NULL,
+author BIGINT UNSIGNED NOT NULL,
+comment_date DATETIME NOT NULL,
+comment TEXT NOT NULL,
+FOREIGN KEY (bug_id) REFERENCES Bugs(bug_id),
+FOREIGN KEY (author) REFERENCES Accounts(account_id)
+);</pre>
+                        </div>
+                        <div class="col-md-6">One weakness of Adjacency List is that it’s expensive to retrieve
+                            ancestors
+                            of a given node in the tree. In Path Enumeration, this is solved by
+                            storing the string of ancestors as an attribute of each node.<br>
+                            You can see a form of Path Enumeration in directory hierarchies. A
+                            UNIX path like /usr/local/lib/ is a Path Enumeration of the filesystem,
+                            where usr is the parent of local, which in turn is the parent of lib.
+                            In the Comments table, instead of the parent_id column, define a column
+                            called path as a long VARCHAR. The string stored in this column is the
+                            sequence of ancestors of the current row in order from the top of the
+                            tree down
+                        </div>
+                    </div>
+                </small>
+            </section>
+            <section class="future" style="top: -20px; display: none;">
+                <h3>Solution: Nested Sets <a href="http://mikehillyer.com/articles/managing-hierarchical-data-in-mysql/" target="_blank">[¿?]</a></h3>
+                <small>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="./DB_files/anti_tree_sol2.jpg">
+                            <pre>CREATE TABLE Comments (
+comment_id SERIAL PRIMARY KEY,
+nsleft INTEGER NOT NULL,
+nsright INTEGER NOT NULL,
+bug_id BIGINT UNSIGNED NOT NULL,
+author BIGINT UNSIGNED NOT NULL,
+comment_date DATETIME NOT NULL,
+comment TEXT NOT NULL,
+FOREIGN KEY (bug_id) REFERENCES Bugs (bug_id),
+FOREIGN KEY (author) REFERENCES Accounts(account_id)
+);</pre>
+                        </div>
+                        <div class="col-md-6">The Nested Sets solution stores information with each node that pertains
+                            to the set of its descendants, rather than the node’s immediate
+                            parent. This information can be represented by encoding each node in
+                            the tree with two numbers, which you can call nsleft and nsright.<br>
+                            Each node is given nsleft and nsright numbers in the following way:
+                            the nsleft number is less than the numbers of all the node’s children,
+                            whereas the nsright number is greater than the numbers of all the node’s
+                            children. These numbers have no relation to the comment_id values.<br>
+                            An easy way to assign these values is by following a depth-first traversal
+                            of the tree, assigning nsleft numbers incrementally as you descend a
+                            branch of the tree and assigning nsright numbers as you ascend back
+                            up the branch.<br>Once you have assigned each node with these numbers, you can use
+                            them to find ancestors and descendants of any given node. For example,
+                            you can retrieve comment #4 and its descendants by searching for
+                            nodes whose numbers are between the current node’s nsleft and nsright.
+                        <pre>SELECT c2.*
+FROM Comments AS c1
+JOIN Comments as c2
+ON c2.nsleft BETWEEN c1.nsleft AND c1.nsright
+WHERE c1.comment_id = 4;</pre>
+                        </div>
+                    </div>
+                </small>
+            </section>
+            <section class="future" style="top: -20px; display: none;">
+                <h3>Solution: Closure Table <a href="https://www.percona.com/blog/2011/02/14/moving-subtrees-in-closure-table/" target="_blank">[¿?]</a></h3>
+                <small>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="./DB_files/anti_tree_sol3.jpg">
+                            <img src="./DB_files/anti_tree_sol4.jpg">
+
+                        </div>
+                        <div class="col-md-6">The Closure Table solution is a simple and elegant way of storing
+                            hierarchies.
+                            It involves storing all paths through the tree, not just those
+                            with a direct parent-child relationship.
+                            In addition to a plain Comments table, create another table TreePaths,
+                            with two columns, each of which is a foreign key to the Comments table.<br><br>
+                            Instead of using the Comments table to store information about the tree
+                            structure, use the TreePaths table. Store one row in this table for each
+                            pair of nodes in the tree that shares an ancestor/descendant relationship,
+                            even if they are separated by multiple levels in the tree. Also add
+                            a row for each node to reference itself.
+                            <pre>CREATE TABLE Comments (
+comment_id SERIAL PRIMARY KEY,
+bug_id BIGINT UNSIGNED NOT NULL,
+author BIGINT UNSIGNED NOT NULL,
+comment_date DATETIME NOT NULL,
+comment TEXT NOT NULL,
+FOREIGN KEY (bug_id) REFERENCES Bugs(bug_id),
+FOREIGN KEY (author) REFERENCES Accounts(account_id)
+);
+CREATE TABLE TreePaths (
+ancestor BIGINT UNSIGNED NOT NULL,
+descendant BIGINT UNSIGNED NOT NULL,
+PRIMARY KEY(ancestor, descendant),
+FOREIGN KEY (ancestor) REFERENCES Comments(comment_id),
+FOREIGN KEY (descendant) REFERENCES Comments(comment_id)
+);
+SELECT c.* FROM Comments AS c
+JOIN TreePaths AS t ON c.comment_id = t.descendant
+WHERE t.ancestor = 4;</pre>
+                        </div>
+                    </div>
+                </small>
+            </section>
+        </section>
+        <!--section>
+            <section>
+                <h3></h3>
+                <small>
+                    <div class="row">
+                        <div class="col-md-6"></div>
+                        <div class="col-md-6"></div>
+                    </div>
+                </small>
+            </section>
+            <section>
+                <h3></h3>
+                <small>
+                    <div class="row">
+                        <div class="col-md-6"></div>
+                        <div class="col-md-6"></div>
+                    </div>
+                </small>
+            </section>
+            <section>
+                <h3></h3>
+                <small>
+                    <div class="row">
+                        <div class="col-md-6"></div>
+                        <div class="col-md-6"></div>
+                    </div>
+                </small>
+            </section>
+        </section-->
+    </div>
+<div class="backgrounds"><div class="slide-background present"></div><div class="slide-background future"><div class="slide-background present"></div><div class="slide-background future"></div></div><div class="slide-background future"><div class="slide-background present"></div><div class="slide-background future"></div><div class="slide-background future"></div><div class="slide-background future"></div><div class="slide-background future"></div><div class="slide-background future"></div><div class="slide-background future"></div><div class="slide-background future"></div></div><div class="slide-background future"><div class="slide-background present"></div><div class="slide-background future"></div><div class="slide-background future"></div><div class="slide-background future"></div><div class="slide-background future"></div><div class="slide-background future"></div><div class="slide-background future"></div></div><div class="slide-background future"><div class="slide-background present"></div><div class="slide-background future"></div></div><div class="slide-background future"><div class="slide-background present"></div><div class="slide-background future"></div><div class="slide-background future"></div><div class="slide-background future"></div><div class="slide-background future"></div><div class="slide-background future"></div><div class="slide-background future"></div><div class="slide-background future"></div><div class="slide-background future"></div><div class="slide-background future"></div><div class="slide-background future"></div><div class="slide-background future"></div><div class="slide-background future"></div><div class="slide-background future"></div><div class="slide-background future"></div><div class="slide-background future"></div></div><div class="slide-background future"><div class="slide-background present"></div><div class="slide-background future"></div></div><div class="slide-background future"></div><div class="slide-background future"><div class="slide-background present"></div><div class="slide-background future"></div><div class="slide-background future"></div><div class="slide-background future"></div><div class="slide-background future"></div><div class="slide-background future"></div><div class="slide-background future"></div></div><div class="slide-background future"><div class="slide-background present"></div><div class="slide-background future"></div></div><div class="slide-background future"><div class="slide-background present"></div><div class="slide-background future"></div><div class="slide-background future"></div></div><div class="slide-background future"><div class="slide-background present"></div><div class="slide-background future"></div><div class="slide-background future"></div><div class="slide-background future"></div><div class="slide-background future"></div><div class="slide-background future"></div><div class="slide-background future"></div></div><div class="slide-background future"><div class="slide-background present"></div><div class="slide-background future"></div><div class="slide-background future"></div><div class="slide-background future"></div></div><div class="slide-background future"><div class="slide-background present"></div><div class="slide-background future"></div></div><div class="slide-background future"><div class="slide-background present"></div><div class="slide-background future"></div><div class="slide-background future"></div><div class="slide-background future"></div><div class="slide-background future"></div><div class="slide-background future"></div></div></div><div class="progress" style="display: block;"><span style="width: 0px;"></span></div><aside class="controls" style="display: block;"><div class="navigate-left"></div><div class="navigate-right enabled"></div><div class="navigate-up"></div><div class="navigate-down"></div></aside><div class="slide-number"></div><div class="state-background"></div><div class="pause-overlay"></div></div>
+<script src="./DB 2014 -2015_files/head.min.js"></script>
+<script src="./DB 2014 -2015_files/reveal.min.js"></script>
+
+<script>
+
+    // Full list of configuration options available here:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Parallax scrolling
+        // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+        // parallaxBackgroundSize: '2100px 900px',
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+            {
+                src: 'lib/js/classList.js', condition: function () {
+                return !document.body.classList;
+            }
+            },
+            {
+                src: 'plugin/markdown/marked.js', condition: function () {
+                return !!document.querySelector('[data-markdown]');
+            }
+            },
+            {
+                src: 'plugin/markdown/markdown.js', condition: function () {
+                return !!document.querySelector('[data-markdown]');
+            }
+            },
+            {
+                src: 'plugin/highlight/highlight.js', async: true, callback: function () {
+                hljs.initHighlightingOnLoad();
+            }
+            },
+            {
+                src: 'plugin/zoom-js/zoom.js', async: true, condition: function () {
+                return !!document.body.classList;
+            }
+            },
+            {
+                src: 'plugin/notes/notes.js', async: true, condition: function () {
+                return !!document.body.classList;
+            }
+            }
+        ]
+    });
+
+</script><script type="text/javascript" src="./DB_files/highlight.js"></script><script type="text/javascript" src="./DB_files/zoom.js"></script><script type="text/javascript" src="./DB 2014 -2015_files/notes.js"></script>
+
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-46767322-1', 'planificaciondeportiva.es');
+    ga('send', 'pageview');
+
+</script>
+
+
+
+</body></html>
